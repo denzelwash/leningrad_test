@@ -1,0 +1,26 @@
+$media571: 'only screen and (min-width: 571px)';
+$media761: 'only screen and (min-width: 761px)';
+$media991: 'only screen and (min-width: 991px)';
+$media1201: 'only screen and (min-width: 1201px)';
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media #{$media571} {
+    max-width: 570px;
+  }
+
+  @media #{$media761} {
+    max-width: 760px;
+  }
+
+  @media #{$media991} {
+    max-width: 990px;
+  }
+
+  @media #{$media1201} {
+    max-width: 1200px;
+  }
+}

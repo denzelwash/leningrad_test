@@ -1,0 +1,135 @@
+@import "../libs/settings";
+
+.page-main__login-form {
+  margin: 50px auto;
+}
+
+.login-form {
+  padding: 35px 25px;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  box-shadow: 0px 5px 10px rgba(37, 37, 37, 0.1);
+  &__title {
+    display: block;
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dadada;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  &__wr {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    margin-bottom: 15px;
+    cursor: pointer;
+    span {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    input {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #dadada;
+      border-radius: 6px;
+    }
+    &--checkbox {
+      input {
+        display: none;
+      }
+      span {
+        position: relative;
+        padding-left: 27px;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 18px;
+          height: 18px;
+          left: 0;
+          top: 0px;
+          background-color: #fff;
+          -webkit-border-radius: 2px;
+          border: 1px solid #dadada;
+          border-radius: 2px;
+        }
+      }
+      input:checked + span:before {
+        background-image: url(../img/checkbox.png);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+  &__submit {
+    padding: 15px;
+    border: none;
+    border: 1px solid #dadada;
+    border-radius: 6px;
+    background-color: #0579f6;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+@media #{$media571} {
+  .login-form {
+    padding: 35px;
+  }
+}
+
+@media #{$media761} {
+  .login-form {
+    &__wr {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__label,
+    &__submit {
+      width: 49%;
+    }
+    &__label--checkbox {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media #{$media991} {
+  .login-form {
+    &__label {
+      margin-bottom: 20px;
+    }
+    &__label--checkbox {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media #{$media1201} {
+  .login-form {
+    max-width: 500px;
+    &__label {
+      width: 100%;
+    }
+    &__label--checkbox {
+      margin-bottom: 20px;
+      display: inline-block;
+      width: auto;
+    }
+    &__submit {
+      width: 100%;
+      transition: background .3s; 
+      &:hover {
+        background: #025dbf;
+      }
+      &:active {
+        background: #004c9e;
+      }
+    }
+  }
+}

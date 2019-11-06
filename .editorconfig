@@ -1,0 +1,17 @@
+# Корневой файл EditorConfig
+root = true
+
+# Для всех файлов
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+
+# Если нужно - отдельные настройки можно переписать для конретного типа файлов
+[*.pug]
+indent_style = space
+indent_size = 2
+
+[*.scss]
+indent_style = space
+indent_size = 2
